@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA15E707-D228-4FB7-9CA3-5A74FFCE0EBE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppSound</RootNamespace>
+    <AssemblyName>AppSound</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>447DC1BE2E727C650C370785A7EC248972F49601</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AppSound_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnswersDE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnswersDE.Designer.cs">
+      <DependentUpon>AnswersDE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_TagneedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_TagneedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DMTSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMTSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExamEngine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamEngine.Designer.cs">
+      <DependentUpon>ExamEngine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportToAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportToAccess.Designer.cs">
+      <DependentUpon>ExportToAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\AccCommand.cs" />
+    <Compile Include="Helper\Answers.cs" />
+    <Compile Include="Helper\Audio.cs" />
+    <Compile Include="Helper\CurrExaminer.cs" />
+    <Compile Include="Helper\DBCatalog.cs" />
+    <Compile Include="Helper\Examiner.cs" />
+    <Compile Include="Helper\FillComboValues.cs" />
+    <Compile Include="Helper\ORCLCommands.cs" />
+    <Compile Include="Helper\Questions.cs" />
+    <Compile Include="Helper\Results.cs" />
+    <Compile Include="Helper\Solider.cs" />
+    <Compile Include="Helper\SqlCommands.cs" />
+    <Compile Include="Helper\_helper.cs" />
+    <Compile Include="InsertBackUps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertBackUps.Designer.cs">
+      <DependentUpon>InsertBackUps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingPage.Designer.cs">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modals\Interview.cs" />
+    <Compile Include="Modals\QualificationModel.cs" />
+    <Compile Include="Modals\RepoPhys.cs" />
+    <Compile Include="Modals\TagneedRegions.cs" />
+    <Compile Include="Modals\TYExaminer.cs" />
+    <Compile Include="Modals\TYouth.cs" />
+    <Compile Include="Modals\TYResults.cs" />
+    <Compile Include="Modals\T_Examiners.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TagneedR\SPExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagneedR\SPExam.Designer.cs">
+      <DependentUpon>SPExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagneedR\SpecificTG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagneedR\SpecificTG.Designer.cs">
+      <DependentUpon>SpecificTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagneedR\Exclude.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagneedR\Exclude.Designer.cs">
+      <DependentUpon>Exclude.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagneedR\backUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagneedR\backUp.Designer.cs">
+      <DependentUpon>backUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagneedR\StatisticalTagneed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagneedR\StatisticalTagneed.Designer.cs">
+      <DependentUpon>StatisticalTagneed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagneedR\Evaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagneedR\Evaluation.Designer.cs">
+      <DependentUpon>Evaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagneedR\Weapons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagneedR\Weapons.Designer.cs">
+      <DependentUpon>Weapons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\HospitalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\HospitalReport.Designer.cs">
+      <DependentUpon>HospitalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\PhsicoReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\PhsicoReports.Designer.cs">
+      <DependentUpon>PhsicoReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\BaseInterview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\BaseInterview.Designer.cs">
+      <DependentUpon>BaseInterview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\ArmedForces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\ArmedForces.Designer.cs">
+      <DependentUpon>ArmedForces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\WorthyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\WorthyReport.Designer.cs">
+      <DependentUpon>WorthyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\CompareResuls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\CompareResuls.Designer.cs">
+      <DependentUpon>CompareResuls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\InterviewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\InterviewReport.Designer.cs">
+      <DependentUpon>InterviewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\Examined.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\Examined.Designer.cs">
+      <DependentUpon>Examined.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\Interview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\Interview.Designer.cs">
+      <DependentUpon>Interview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\StateInterview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\StateInterview.Designer.cs">
+      <DependentUpon>StateInterview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\StateReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\StateReports.Designer.cs">
+      <DependentUpon>StateReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\States.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\States.Designer.cs">
+      <DependentUpon>States.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\ResultsCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\ResultsCollection.Designer.cs">
+      <DependentUpon>ResultsCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\StatisticalStates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\StatisticalStates.Designer.cs">
+      <DependentUpon>StatisticalStates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tagneed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tagneed.Designer.cs">
+      <DependentUpon>Tagneed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TStates\UpInterview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TStates\UpInterview.Designer.cs">
+      <DependentUpon>UpInterview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs" />
+    <EmbeddedResource Include="AnswersDE.resx">
+      <DependentUpon>AnswersDE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamEngine.resx">
+      <DependentUpon>ExamEngine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportToAccess.resx">
+      <DependentUpon>ExportToAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertBackUps.resx">
+      <DependentUpon>InsertBackUps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingPage.resx">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\compare_rs.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\exm.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EXTG.rdlc" />
+    <EmbeddedResource Include="Reports\kobbaReport.rdlc" />
+    <EmbeddedResource Include="Reports\Armed.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\mainTagneed.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\phsyco.rdlc" />
+    <EmbeddedResource Include="Reports\QUFEXM_noAgg.rdlc" />
+    <EmbeddedResource Include="Reports\QUFEXM.rdlc" />
+    <EmbeddedResource Include="Reports\QUFTG.rdlc" />
+    <EmbeddedResource Include="Reports\syco.rdlc" />
+    <EmbeddedResource Include="Reports\galalReport.rdlc" />
+    <EmbeddedResource Include="Reports\worthRep_sec.rdlc" />
+    <EmbeddedResource Include="Reports\worthRep.rdlc" />
+    <EmbeddedResource Include="Reports\repRep.rdlc" />
+    <EmbeddedResource Include="Reports\results.rdlc" />
+    <EmbeddedResource Include="Reports\SPExamRepo.rdlc" />
+    <EmbeddedResource Include="Reports\STSEXM_noAgg.rdlc" />
+    <EmbeddedResource Include="Reports\STSEXM.rdlc" />
+    <EmbeddedResource Include="Reports\STSReport.rdlc" />
+    <EmbeddedResource Include="Reports\TagneedReport.rdlc" />
+    <EmbeddedResource Include="Reports\TGEXMS_noAgg.rdlc" />
+    <EmbeddedResource Include="Reports\TGEXMS.rdlc" />
+    <EmbeddedResource Include="TagneedR\SPExam.resx">
+      <DependentUpon>SPExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagneedR\SpecificTG.resx">
+      <DependentUpon>SpecificTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagneedR\Exclude.resx">
+      <DependentUpon>Exclude.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagneedR\backUp.resx">
+      <DependentUpon>backUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagneedR\StatisticalTagneed.resx">
+      <DependentUpon>StatisticalTagneed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagneedR\Evaluation.resx">
+      <DependentUpon>Evaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagneedR\Weapons.resx">
+      <DependentUpon>Weapons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\HospitalReport.resx">
+      <DependentUpon>HospitalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\PhsicoReports.resx">
+      <DependentUpon>PhsicoReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\BaseInterview.resx">
+      <DependentUpon>BaseInterview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\ArmedForces.resx">
+      <DependentUpon>ArmedForces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\WorthyReport.resx">
+      <DependentUpon>WorthyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\CompareResuls.resx">
+      <DependentUpon>CompareResuls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\InterviewReport.resx">
+      <DependentUpon>InterviewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\Examined.resx">
+      <DependentUpon>Examined.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\Interview.resx">
+      <DependentUpon>Interview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\StateInterview.resx">
+      <DependentUpon>StateInterview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\StateReports.resx">
+      <DependentUpon>StateReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\States.resx">
+      <DependentUpon>States.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\ResultsCollection.resx">
+      <DependentUpon>ResultsCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\StatisticalStates.resx">
+      <DependentUpon>StatisticalStates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tagneed.resx">
+      <DependentUpon>Tagneed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TStates\UpInterview.resx">
+      <DependentUpon>UpInterview.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AppSound_TemporaryKey.pfx" />
+    <None Include="DB_TagneedDataSet.xsc">
+      <DependentUpon>DB_TagneedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_TagneedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_TagneedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_TagneedDataSet.xss">
+      <DependentUpon>DB_TagneedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DMTSet.xsc">
+      <DependentUpon>DMTSet.xsd</DependentUpon>
+    </None>
+    <None Include="DMTSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DMTSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DMTSet.xss">
+      <DependentUpon>DMTSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AppSound.Modals.Interview.datasource" />
+    <None Include="Properties\DataSources\AppSound.Modals.PhsycoRepo.datasource" />
+    <None Include="Properties\DataSources\AppSound.Modals.QualificationModel.datasource" />
+    <None Include="Properties\DataSources\AppSound.Modals.RepoPhys.datasource" />
+    <None Include="Properties\DataSources\AppSound.Modals.TagneedRegions.datasource" />
+    <None Include="Properties\DataSources\AppSound.Modals.TResults.datasource" />
+    <None Include="Properties\DataSources\AppSound.Modals.TYExaminer.datasource" />
+    <None Include="Properties\DataSources\AppSound.Modals.TYResults.datasource" />
+    <None Include="Properties\DataSources\AppSound.Modals.TYTGExaminer.datasource" />
+    <None Include="Properties\DataSources\AppSound.Modals.T_Examiners.datasource" />
+    <None Include="Properties\DataSources\Examiner.datasource" />
+    <None Include="Properties\DataSources\Results.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\introduction.mp3" />
+    <None Include="Resources\testDemo.mp3" />
+    <None Include="Resources\123.png" />
+    <None Include="Resources\intro.bmp" />
+    <None Include="Resources\Capture.PNG" />
+    <Content Include="Resources\intro.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
